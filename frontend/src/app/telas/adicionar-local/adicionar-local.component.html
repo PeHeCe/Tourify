@@ -1,0 +1,34 @@
+<app-header-secundario [nomeTela]="'Adicionar Local ao Cronograma'"></app-header-secundario>
+
+<div id="container">
+    <div class="container-link-voltar">
+        <a class="link-voltar" [href]="'cronograma/editar/' + idCronograma"><i class="bi bi-arrow-left">&nbsp;&nbsp;</i></a>
+        <a class="link-voltar" [href]="'cronograma/editar/' + idCronograma">Voltar à edição do cronograma</a>
+    </div>
+
+    <h5>Pesquise, escolha e selecione um local para ser adicionado ao seu cronograma</h5>
+    <br/>
+    <form (ngSubmit)="buscarEstabelecimentos(refLocalForm)" #refLocalForm="ngForm" ngNativeValidate>
+        <div class="d-flex align-items-center">
+            <input type="text" class="col-4 input-busca" ngModel name="busca" required oninvalid="this.setCustomValidity('Preencha o campo de Busca, por favor!')" onInput="setCustomValidity('')">
+            <button type="submit" class="btn btn-info">Buscar</button>
+        </div>
+    </form>
+
+    <div class="lista-estabelecimentos">
+    @for (e of estabelecimentos; track $index) {
+        <div class="col-7">
+            <div class="row align-items-center mb-2 linha-estabelecimento">
+                <div class="col-10 text-start">
+                    <span>{{e.estabelecimento.nome}}</span>
+                </div>
+                <div class="col-2 text-end">
+                    <button class="btn btn-add" (click)="adicionarAoCronograma(e.estabelecimento.id)">Adicionar</button>
+                </div>
+            </div>
+        </div>
+    } @empty {
+        <p>Pesquise para escolher um local...</p>
+    }
+    </div>
+</div>

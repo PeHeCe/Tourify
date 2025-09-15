@@ -1,0 +1,21 @@
+.header {
+    background-color: #eaeaea;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+}
+
+.links-container {
+    vertical-align: middle;
+}
+
+#link-perfil {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+}

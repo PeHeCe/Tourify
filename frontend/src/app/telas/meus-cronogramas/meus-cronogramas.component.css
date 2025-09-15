@@ -1,0 +1,67 @@
+#container {
+    margin: 50px;
+}
+
+.container-link-voltar {
+    margin-bottom: 20px;
+}
+
+.link-voltar {
+    text-decoration: none;
+}
+
+.cronograma-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #123D72;
+    color: white;
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    cursor: pointer;
+}
+
+.cronograma-container:hover {
+    box-shadow: 7px 8px 20px 0 rgba(21, 55, 81, 0.3);
+}
+
+.cronograma-container:active {
+    transform: scale(0.99);
+    box-shadow: 7px 8px 20px 0 rgba(21, 55, 81, 0.3);
+}
+
+
+.cronograma-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #123D72;
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    gap: 30px;  
+    margin-bottom: 20px; 
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    cursor: pointer;
+}
+
+.cronograma-container:hover {
+    box-shadow: 0 8px 25px rgba(21, 55, 81, 0.4);
+    background-color: #005392; 
+    transform: translateY(-5px); 
+}
+
+.cronograma-container:active {
+    transform: scale(0.99);
+    box-shadow: 7px 8px 20px 0 rgba(21, 55, 81, 0.3);
+}

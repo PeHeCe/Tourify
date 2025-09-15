@@ -1,0 +1,25 @@
+<app-header-secundario [nomeTela]="'Meus Cronogramas'"></app-header-secundario>
+
+<div id="container">
+    <div class="container-link-voltar">
+        <a class="link-voltar" [href]="'perfil'"><i class="bi bi-arrow-left">&nbsp;&nbsp;</i></a>
+        <a class="link-voltar" href="perfil/">Voltar ao seu perfil</a>
+    </div>
+
+    <h5>Estes são os cronogramas que você salvou, que tal repetir uma dessas experiências?</h5>
+
+    @for (c of cronogramas; track $index) {
+        <div class="cronograma-container" (click)="navegarCronograma(c.id)">
+            <div>
+                <h5>{{c.nome}}</h5>
+                <p>{{formatarData(c.data)}}</p>
+                <p>De {{formatarHorario(c.hora_inicio)}} até {{formatarHorario(c.hora_fim)}}</p>
+            </div>
+            <div>
+                <p>{{c.papel_usuario}}</p>
+            </div>
+        </div>
+    } @empty {
+        <p>Você não tem nenhum cronograma salvo no momento...</p>
+    }
+</div>

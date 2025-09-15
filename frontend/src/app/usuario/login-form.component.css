@@ -1,0 +1,21 @@
+h2 {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+.form-control {
+    border-radius: 30px;
+    padding: 10px;
+}
+.btn-login {
+    width: 100%;
+    background-color: #00c4ff;
+    border-radius: 30px;
+    padding: 10px;
+    font-weight: bold;
+}
+.btn-login:hover {
+    background-color: #00a8d6;
+}
+.form-text {
+    color: #cccccc;
+}

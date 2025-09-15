@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7; 
+  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 60px);
+}
+
+.profile-card {
+  background: #ffffff;
+  padding: 30px;
+  width: 400px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  border: 1px solid #e0e0e0;
+}
+
+.profile-card:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background-color: #e0f7fa;
+  z-index: -1;
+  border-radius: 20px;
+}
+
+.profile-card p {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  color: #555;
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #0cc0df;
+  object-fit: cover;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.foto-perfil:before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -15px;
+}
+
+.profile-card h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: #333;
+}
+
+.profile-card h3 {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #777;
+  font-weight: 400;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.buttons button {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #0cc0df;
+  color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.buttons button:hover {
+  background-color: #00a7c5;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.actions .edit,
+.actions .delete {
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 48%;
+}
+
+.actions .edit {
+  background-color: #0cc0df;
+  color: white;
+}
+
+.actions .edit:hover {
+  background-color: #00a7c5;
+}
+
+.actions .delete {
+  background-color: #fd3a3a;
+  color: white;
+}
+
+.actions .delete:hover {
+  background-color: #e02c2c;
+}

@@ -1,0 +1,28 @@
+.container {
+    margin-left: 220px;
+    margin-top: 50px;
+}
+
+h3 {
+    color: #123D72;
+}
+
+.label {
+    color: #123D72;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+}
+
+.button-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.button-criar {
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 30px;
+    background-color: #123D72;
+    color: white;
+    font-size: 20px;
+}

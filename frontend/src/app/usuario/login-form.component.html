@@ -1,0 +1,25 @@
+<h2>BEM-VINDO</h2>
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="usuario">E-mail</label>
+            <input type="text" class="form-control" id="usuario" formControlName="usuarioTS">
+        </div>
+        <div class="mb-3">
+            <label for="usuario">Senha</label>
+            <input type="password" class="form-control" id="password" formControlName="senhaTS">
+        </div>
+
+        @if (erroRetorno) {
+            <span>Login inválido...</span>
+        } @else {
+            <span style="color: #0a3e70;">AAA</span>
+        }
+
+        <!-- <div class="mb-3 text-end">
+            <a href="#" class="form-text">Esqueceu a senha?</a>
+        </div> -->
+        <button type="submit" class="btn btn-login" [disabled]="!myForm.valid">Login</button>
+        <!-- <div class="text-center mt-3">
+            <a href="#" class="form-text">Não tem cadastro? <u>Crie uma conta.</u></a>
+        </div> -->
+    </form>

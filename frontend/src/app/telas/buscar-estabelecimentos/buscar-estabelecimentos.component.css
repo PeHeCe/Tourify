@@ -1,0 +1,107 @@
+.container {
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 0 15px;
+}
+
+.input-busca {
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-busca:focus {
+    border-color: #1a5e91;
+    box-shadow: 0 0 10px rgba(26, 94, 145, 0.3);
+    outline: none;
+}
+
+.estabelecimento-container {
+    margin: 50px 0;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.estabelecimento-container:hover {
+    transform: translateY(-5px);
+}
+
+.estabelecimento {
+    display: flex;
+    background-color: #123D72;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    gap: 20px;
+    align-items: center;
+}
+
+.estabelecimento:hover {
+    box-shadow: 0 8px 25px rgba(21, 55, 81, 0.4);
+    background-color: #1a5e91;
+    transform: translateY(-5px);
+}
+
+.estabelecimento:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 15px rgba(21, 55, 81, 0.3);
+}
+
+.img-estabelecimento {
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details-estabelecimento {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.details-estabelecimento h5 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.details-estabelecimento p {
+    font-size: 16px;
+    color: #d4e6f1;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .estabelecimento {
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .img-estabelecimento {
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .input-busca {
+        max-width: 100%;
+    }
+}

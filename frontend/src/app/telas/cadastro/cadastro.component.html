@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="barra-superior d-flex align-items-center">
+      <h2 class="titulo">Crie seu cadastro</h2>
+    </div>
+
+    <p id="instrucoes">Preencha os seguintes campos com as informações pedidas:</p>
+    
+    <form [formGroup]=" cadastroForm" (ngSubmit)="onSubmit()">
+      
+      <label class="label nome" for="nome">Nome <span class="obrigatorio">*</span></label>
+      <input type="text" id="nome" formControlName="nome" class="campo-input nome" required>
+      @if (cadastroForm.get('nome')?.errors?.['required'] &&
+           cadastroForm.get('nome')?.touched) {
+            <div><p class="erro nome">Nome obrigatório.</p></div>
+           }
+  
+      <label class="label sobrenome" for="sobrenome">Sobrenome <span class="obrigatorio">*</span></label>
+      <input type="text" id="sobrenome" formControlName="sobrenome" class="campo-input sobrenome" required>
+      @if (cadastroForm.get('sobrenome')?.errors?.['required'] &&
+           cadastroForm.get('sobrenome')?.touched) {
+            <div><p class="erro sobrenome">Sobrenome obrigatório.</p></div>
+           }
+  
+      <label class="label telefone" for="telefone">Telefone</label>
+      <input type="text" id="telefone" formControlName="telefone" class="campo-input telefone">
+
+      <label class="label cep" for="cep">CEP</label>
+      <input type="text" id="cep" formControlName="cep" class="campo-input cep">
+
+      <label class="label cpf" for="cpf">CPF <span class="obrigatorio">*</span></label>
+      <input type="text" id="cpf" formControlName="cpf" class="campo-input cpf" required>
+      @if (cadastroForm.get('cpf')?.errors?.['required'] &&
+           cadastroForm.get('cpf')?.touched) {
+            <div><p class="erro cpf">CPF obrigatório.</p></div>
+           }
+        
+      <label class="label email" for="email">E-mail <span class="obrigatorio">*</span></label>
+      <input type="text" id="email" formControlName="email" class="campo-input email" required>
+      @if (cadastroForm.get('email')?.errors?.['required'] &&
+           cadastroForm.get('email')?.touched) {
+            <div><p class="erro email">Email obrigatório.</p></div>
+           }
+           @if (cadastroForm.get('email')?.errors?.['pattern'] &&
+           cadastroForm.get('email')?.touched) {
+            <div><p class="erro emailInvalido">Email invalido.</p></div>
+           }
+  
+      <label class="label senha" for="senha">Senha <span class="obrigatorio">*</span></label>
+      <input type="password" id="senha" formControlName="senha" class="campo-input senha" required>
+      @if (cadastroForm.get('senha')?.errors?.['required'] &&
+           cadastroForm.get('senha')?.touched) {
+            <div><p class="erro senha">Senha obrigatória.</p></div>
+      }   
+       
+      <p class="requisitos-senha texto-senha">Por questões de segurança, a senha deve seguir os criterios abaixo:</p>
+      <ul>
+        <li class="requisitos-senha minimo-caracteres">Mínimo 8 caracteres</li>
+        <li class="requisitos-senha letra-maiuscula">Pelo menos uma letra MAIÚSCULA</li>
+        <li class="requisitos-senha letra-minuscula">Pelo menos um número</li>
+        <li class="requisitos-senha caractere-especial">Pelo menos um caractere especial (Ex.: !#$&%*)</li>
+      </ul>
+  
+      <button type="submit" [disabled]="!cadastroForm.valid" class="btn botao-cadastrar" >Cadastrar</button>
+    </form>
+    
+    <img class="imagem" src="../../../assets/logo.png"/>
+  </div>

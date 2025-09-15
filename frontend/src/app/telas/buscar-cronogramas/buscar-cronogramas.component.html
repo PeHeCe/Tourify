@@ -1,0 +1,21 @@
+<app-header-principal></app-header-principal>
+
+<div id="container">
+    <h2>Busque por Cronogramas:</h2>
+    <p>Explore experiências feitas especialmente para você, escolha uma e aproveite!</p>
+
+    @for (c of cronogramas; track $index) {
+        <div class="cronograma-container">
+            <div>
+                <h5>{{c.cronograma.nome}}</h5>
+                <ul>
+                    @for (e of c.estabelecimentos; track $index) {
+                        <li>{{e}}</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    } @empty {
+        <p>Não há nenhum cronograma disponível...</p>
+    }
+</div>

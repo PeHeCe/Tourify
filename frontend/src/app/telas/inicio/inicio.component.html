@@ -1,0 +1,21 @@
+<app-header-principal></app-header-principal>
+
+<div class="container">
+    <h2>Recomendados para você:</h2>
+    <p>Locais mais bem avaliados da sua região!</p>
+
+    @for (e of estabelecimentos; track $index) {
+        <div class="estabelecimento-container" (click)="navegarTelaEstabelecimento(e.estabelecimento.id)">
+            <div class="estabelecimento">
+                <img class="img-estabelecimento" *ngIf="e.estabelecimento.imagem" [src]="'data:image/png;base64,' + e.estabelecimento.imagem"/>
+                <div class="details-estabelecimento">
+                    <h5>{{e.estabelecimento.nome}}</h5>
+                    <p>{{e.estabelecimento.descricao}}</p>
+                </div>
+            </div>
+        </div>
+    } @empty {
+        <p>Nenhuma sugestão no momento...</p>
+    }
+
+</div>

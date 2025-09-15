@@ -1,0 +1,32 @@
+<app-header-secundario [nomeTela]="'Estabelecimento'"></app-header-secundario>
+
+<br/>
+<div class="container-estabelecimento">
+    <div class="image-section">
+        <img id="img-estabelecimento" *ngIf="estabelecimento.imagem" [src]="'data:image/png;base64,' + estabelecimento.imagem" />
+    </div>
+
+ <div class="details-section">
+        <h3 id="nome-estabelecimento">{{ estabelecimento.nome }}</h3>
+        <p id="descricao">{{ estabelecimento.descricao }}</p>
+        <p>Localizado em: {{ estabelecimento.endereco }}</p>
+        <p>Aberto das {{ estabelecimento.horario_abertura }} até as {{ estabelecimento.horario_fechamento }}</p>
+    <p>
+        Nível de Preço: 
+        @if (estabelecimento.nivel_preco == 0) {
+            Gratuito
+        } @else if (estabelecimento.nivel_preco == 1) {
+            Baixo
+        } @else if (estabelecimento.nivel_preco == 2) {
+            Médio
+        } @else if (estabelecimento.nivel_preco == 3) {
+            Alto
+        }
+    </p>
+    <p>Contatos:</p>
+        <ul class="contact-list">
+            <li>{{ estabelecimento.telefone_contato }}</li>
+            <li>{{ estabelecimento.site }}</li>
+        </ul>
+    </div>
+</div>

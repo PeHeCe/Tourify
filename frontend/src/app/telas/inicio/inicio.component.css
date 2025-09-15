@@ -1,0 +1,119 @@
+.container {
+    margin: 30px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.estabelecimento-container {
+    margin: 50px 0;
+    cursor: pointer;
+}
+
+.estabelecimento {
+    display: flex;
+    background-color: #123D72;
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    align-items: center;
+    gap: 30px;
+}
+
+.estabelecimento:hover {
+    box-shadow: 0 8px 25px rgba(21, 55, 81, 0.4);
+    background-color: #005392;
+    transform: translateY(-5px);
+}
+
+.estabelecimento:active {
+    transform: scale(0.98);
+    box-shadow: 0 4px 15px rgba(21, 55, 81, 0.3);
+}
+
+h2.titulo-recomendados {
+    font-size: 28px;
+    font-weight: 700;
+    color: #123D72;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    background: linear-gradient(to right, #1a5e91, #123D72);
+    color: transparent;
+    padding: 5px 10px;
+}
+
+h2.titulo-recomendados::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin-top: 10px;
+}
+
+.img-estabelecimento {
+    width: 100%;
+    height: auto;
+    max-width: 230px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.details-estabelecimento {
+    margin-left: 25px;
+    flex: 1;
+}
+
+.details-estabelecimento h3 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.details-estabelecimento p {
+    font-size: 16px;
+    color: #d4e6f1;
+    margin-bottom: 15px;
+}
+
+.contact-list {
+    margin-top: 20px;
+}
+
+.contact-list li {
+    font-size: 16px;
+    color: #d4e6f1;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.contact-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .estabelecimento {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .img-estabelecimento {
+        max-width: 200px;
+        margin-bottom: 15px;
+    }
+
+    .container {
+        margin: 20px;
+    }
+
+    .details-estabelecimento {
+        margin-left: 0;
+    }
+}

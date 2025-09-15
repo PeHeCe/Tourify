@@ -1,0 +1,31 @@
+<app-header-principal></app-header-principal>
+
+<form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <div class="container">
+        <h3>Criação de Cronograma Manual:</h3>
+        <br/><br/>
+        <div class="row">
+            <div class="col-md-4">
+                <label for="nomeCronograma" class="label form-label">Nome do seu cronograma</label>
+                <input type="text" class="form-control" id="nomeCronograma" formControlName="nomeTS" placeholder="Insira o nome">
+            </div>
+            <div class="col-md-4">
+                <label for="data" class="label form-label">Data</label>
+                <input type="date" class="form-control" id="data" formControlName="dataTS">
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <label for="horarioInicio" class="label form-label">Horário de Início</label>
+                <input type="time" class="form-control" id="horarioInicio" formControlName="horarioInicioTS">
+            </div>
+            <div class="col-md-4">
+                <label for="horarioFim" class="label form-label">Horário de Fim</label>
+                <input type="time" class="form-control" id="horarioFim" formControlName="horarioFimTS">
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button type="submit" class="btn button-criar" [disabled]="!myForm.valid">Criar</button>
+    </div>
+</form>

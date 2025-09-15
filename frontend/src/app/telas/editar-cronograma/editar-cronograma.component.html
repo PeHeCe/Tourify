@@ -1,0 +1,24 @@
+<app-header-secundario [nomeTela]="'Editar Cronograma: ' + cronograma.nome"></app-header-secundario>
+
+<div id="container">
+  <h5>Adicione ou remova locais do seu cronograma para que ele se adeque aos seus planos:</h5>
+  <button (click)="salvar()" class="btn btn-success">Salvar Alterações</button>
+  <button (click)="navegarAdicionarEstabelecimento(cronograma.id)" class="btn btn-info">Adicionar Local</button>
+  <br/><br/>
+  
+  <div class="cards-wrapper">
+    @for (e of estabelecimentos; track $index) {
+        <div class="estabelecimento-card">
+            <h5>{{ e.nome }}</h5>
+            <!-- <p><strong>Horário Planejado:</strong> {{ e.horario || 'Não informado' }} </p>
+            <p><strong>Endereço do Local:</strong> {{ e.endereco || 'Não informado' }}</p> -->
+            <div class="d-flex justify-content-center align-items-center" >
+              <i (click)="excluirEstabelecimento(e.id)" class="bi bi-trash text-danger" style="font-size: 30px; cursor: pointer;"></i>
+          </div>
+        </div>
+    } @empty {
+        Cronograma vazio no momento...
+    }
+  </div>
+</div>
+  

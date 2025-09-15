@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <app-header-principal></app-header-principal> 
+
+  <main class="profile-container">
+    <div class="profile-card">
+      <div class="perfil-container">
+        <!-- <img src="/assets/luana.png" alt="Foto de perfil" class="foto-perfil" /> -->
+      </div>
+      <h2>{{usuario.nome + " " + usuario.sobrenome}}</h2>
+      <p>{{usuario.email}}</p>
+      <div class="buttons">
+        <button (click)="navegarMeusCronogramas()">Meus Cronogramas</button>
+        <!-- <button>Favoritos</button> -->
+      </div>
+      <div class="actions">
+        <!-- <button class="edit">Editar Perfil</button>
+        <button class="delete">Excluir Perfil</button> -->
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

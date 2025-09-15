@@ -1,0 +1,28 @@
+<app-header-principal></app-header-principal>
+
+<div class="container">
+    <h2>Busque Estabelecimentos:</h2>
+    <p>Pesquise locais que podem te interessar!</p>
+
+    <form (ngSubmit)="buscarEstabelecimentos(refLocalForm)" #refLocalForm="ngForm" ngNativeValidate>
+        <div class="d-flex align-items-center">
+            <input type="text" class="col-5 input-busca" ngModel name="busca" required oninvalid="this.setCustomValidity('Preencha o campo de Busca, por favor!')" onInput="setCustomValidity('')">
+            <button type="submit" class="btn btn-info">Buscar</button>
+        </div>
+    </form>
+
+    @for (e of estabelecimentos; track $index) {
+        <div class="estabelecimento-container" (click)="navegarTelaEstabelecimento(e.estabelecimento.id)">
+            <div class="estabelecimento">
+                <img class="img-estabelecimento" *ngIf="e.estabelecimento.imagem" [src]="'data:image/png;base64,' + e.estabelecimento.imagem"/>
+                <div class="details-estabelecimento">
+                    <h5>{{e.estabelecimento.nome}}</h5>
+                    <p>{{e.estabelecimento.descricao}}</p>
+                </div>
+            </div>
+        </div>
+    } @empty {
+        <!-- <p>Pesquise para encontrar estabelecimentos...</p> -->
+    }
+
+</div>

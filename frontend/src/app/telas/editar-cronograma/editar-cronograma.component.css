@@ -1,0 +1,80 @@
+#container {
+    margin: 50px;
+}
+
+.btn {
+    margin: 10px;
+}
+
+.icon-excluir {
+    width: 50px;
+}
+
+.cards-wrapper {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding-bottom: 10px;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+}
+
+.estabelecimento-card {
+    width: 300px;
+    flex-shrink: 0;
+    height: 200px;
+    background-color: #d9f2fa;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.estabelecimento-card h5 {
+    margin: 0;
+    font-size: 20px;
+    color: #123D72;
+    text-align: center;
+}
+
+.estabelecimento-card p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+    flex-grow: 1;
+}
+
+.estabelecimento-card a {
+    color: #007bff;
+    text-decoration: none;
+    align-self: flex-end;
+}
+
+.estabelecimento-card a:hover {
+    text-decoration: underline;
+}
+
+.scroll-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.seta {
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: #123D72;
+    cursor: pointer;
+}
+
+.seta:hover {
+    color: #007bff;
+}

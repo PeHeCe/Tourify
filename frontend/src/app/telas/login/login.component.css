@@ -1,0 +1,10 @@
+#fundo {
+    margin: 0;
+    padding: 150px;
+    height: 100vh; /* Define a altura como 100% da viewport */
+    width: 100%;
+    background-image: linear-gradient(#0CC0DF, #076879);
+    background-size: cover; /* Faz com que a imagem cubra toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}  
